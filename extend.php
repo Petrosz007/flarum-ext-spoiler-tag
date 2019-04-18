@@ -29,7 +29,7 @@ return [
                                             if(spoiler_content.style.maxHeight == 0) {
                                                 spoiler_content.style.maxHeight = 0;
                                             } else {
-                                                spoiler_content.style.maxHeight = spoiler_content.scrollHeight + "px";
+                                                spoiler_content.style.maxHeight = spoiler_content.scrollHeight + 'px';
                                             }
                                         });
                                     }
