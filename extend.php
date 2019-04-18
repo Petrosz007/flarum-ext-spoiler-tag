@@ -27,7 +27,7 @@ return [
                                                 e.currentTarget.classList.toggle('spoiler-collapse-active');
 
                                                 let spoiler_content = e.currentTarget.nextElementSibling;
-                                                if(spoiler_content.style.maxHeight == 0) {
+                                                if(spoiler_content.style.maxHeight != 0) {
                                                     spoiler_content.style.maxHeight = 0;
                                                 } else {
                                                     spoiler_content.style.maxHeight = spoiler_content.scrollHeight + 'px';
