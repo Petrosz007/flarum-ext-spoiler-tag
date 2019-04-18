@@ -29,7 +29,7 @@ return [
             $config->BBCodes->addCustom(
                 '[spoiler]{TEXT1}[/spoiler]',
                 '<div class="spoiler">
-                    <button class="spoiler-toggle" conclick="$(this).toggleClass(\'spoiler-toggle-active\');$(this).parent().next(\'div.spoiler-content\').slideToggle();">SPOILER</button>
+                    <button class="spoiler-toggle" onclick="$(this).toggleClass(\'spoiler-toggle-active\');$(this).next(\'div.spoiler-content\').slideToggle();">SPOILER</button>
                     <div class="spoiler-content">
                         <p>
                         {TEXT1}
