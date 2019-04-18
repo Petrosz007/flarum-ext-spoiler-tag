@@ -1,0 +1,95 @@
+/* spoiler */
+
+.spoiler { width: 100%; position: relative; }
+.spoiler-chk { 
+  width: 100%;
+  position: absolute; 
+  left: 0px;
+  top: 0px;
+  height: 40px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -khtml-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 0 20px;
+  z-index: 2;
+  margin: 0px;
+  border: 0;
+  border-radius: 0;	
+}
+
+input.spoiler-chk:checked {
+    background-color: transparent;
+}
+
+.spoiler h3 { 
+  background: #3175c4 none; 
+  border: 1px solid #3175c4 !important; 
+  position: relative; 
+  padding: 10px; 
+  color: #fff; 
+  font-size: 16px; 
+  font-weight: normal; 
+  font-family: arial; 
+  margin: 0;
+  z-index: 1;
+}
+
+.spoiler h3 .spoiler-icon { 
+  width: 0; 
+  height: 0; 
+  position: absolute; 
+  right: 10px; 
+  top: 15px; 
+  border-left: 5px solid transparent; 
+  border-right: 5px solid transparent; 
+  border-top: 5px solid #fff; 
+  border-bottom: 5px solid transparent; 
+}
+
+.spoiler .spoiler-chk:checked + h3 > .spoiler-icon { 
+  border-left: 5px solid transparent; 
+  border-right: 5px solid transparent; 
+  border-bottom: 5px solid #fff; 
+  border-top: 5px solid transparent; 
+  top: 10px; 
+}
+
+.spoiler .spoiler-chk:checked + h3 + div.spoiler-content { 
+   opacity: 1;
+   -moz-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    max-height: 1000px;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.spoiler-content { 
+   opacity: 0;
+    padding: 15px;
+    overflow: hidden;
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    -moz-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    border: 1px solid #3175c4;
+    margin-bottom: 2px;
+}
