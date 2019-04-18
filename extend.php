@@ -18,21 +18,23 @@ return [
         ->css(__DIR__ . '/assets/style.css')
         ->content(function (Document $document) {
             $document->head[] = "<script>
-                                    let spoilers = document.getElementsByClassName('spoiler-collapse');
+                                    setTimeout(() => {
+                                        let spoilers = document.getElementsByClassName('spoiler-collapse');
 
-                                    for(let index_ = 0; index_ < spoilers.length; index_++) {
-                                        let element = spoilers[index_];
-                                        element.addEventListener('click', (e) => {
-                                            e.currentTarget.classList.toggle('spoiler-collapse-active');
+                                        for(let index_ = 0; index_ < spoilers.length; index_++) {
+                                            let element = spoilers[index_];
+                                            element.addEventListener('click', (e) => {
+                                                e.currentTarget.classList.toggle('spoiler-collapse-active');
 
-                                            let spoiler_content = e.currentTarget.nextElementSibling;
-                                            if(spoiler_content.style.maxHeight == 0) {
-                                                spoiler_content.style.maxHeight = 0;
-                                            } else {
-                                                spoiler_content.style.maxHeight = spoiler_content.scrollHeight + 'px';
-                                            }
-                                        });
-                                    }
+                                                let spoiler_content = e.currentTarget.nextElementSibling;
+                                                if(spoiler_content.style.maxHeight == 0) {
+                                                    spoiler_content.style.maxHeight = 0;
+                                                } else {
+                                                    spoiler_content.style.maxHeight = spoiler_content.scrollHeight + 'px';
+                                                }
+                                            });
+                                        }
+                                    }, 1000);
                                 </script>";
         }),
     (new Extend\Formatter)
