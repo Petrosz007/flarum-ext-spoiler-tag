@@ -1,5 +1,5 @@
  /* Style the button that is used to open and close the collapsible content */
- .spoiler-collapse {
+ .spoiler-toggle {
   background-color: #eee;
   color: #444;
   cursor: pointer;
@@ -11,7 +11,7 @@
   font-size: 15px;
 }
 
-.spoiler-collapse:after {
+.spoiler-toggle:after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
   font-size: 13px;
   color: white;
@@ -19,12 +19,12 @@
   margin-left: 5px;
 }
 
-.spoiler-collapse-active:after {
+.spoiler-toggle-active:after {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.spoiler-collapse-active, .spoiler-collapse:hover {
+.spoiler-toggle-active, .spoiler-toggle:hover {
   background-color: #ccc;
 }
 
