@@ -16,10 +16,10 @@ use s9e\TextFormatter\Configurator;
 return [
     (new Extend\Frontend('forum'))
         ->content(function (Document $document) {
-            $document->head[] = '<link rel="stylesheet" type="text/css" href="./assets/extensions/petrosz007-spoiler-tag/style.css">';
+            $document->head[] = '<link rel="stylesheet" type="text/css" href="https://andipeter.me/forum/assets/extensions/petrosz007-spoiler-tag/style.css">';
         })
         ->content(function (Document $document) {
-            $document->head[] = '<script src="./assets/extensions/petrosz007-spoiler-tag/spoiler.css">';
+            $document->head[] = '<script src="https://andipeter.me/forum/assets/extensions/petrosz007-spoiler-tag/spoiler.js">';
         }),
     (new Extend\Formatter)
         ->configure(function (Configurator $config) {
