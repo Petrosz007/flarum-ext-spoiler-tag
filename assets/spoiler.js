@@ -1,4 +1,7 @@
-document.getElementsByClassName("spoiler-collapse").forEach(element => {
+let spoilers = document.getElementsByClassName('spoiler-collapse');
+
+for(let i = 0; i < spoilers.length; i++) {
+    let element = spoilers[i];
     element.addEventListener('click', () => {
         this.classList.toggle('spoiler-collapse-active');
 
@@ -9,5 +12,5 @@ document.getElementsByClassName("spoiler-collapse").forEach(element => {
             spoiler_content.style.maxHeight = spoiler_content.scrollHeight + "px";
         }
     });
-    console.log('asd');
-});
+    console.log('asd'); 
+}
