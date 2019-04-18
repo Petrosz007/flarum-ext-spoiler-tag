@@ -15,7 +15,7 @@ use s9e\TextFormatter\Configurator;
 
 return [
     (new Extend\Frontend('forum'))
-        ->css(__DIR__ . 'assets/style.css')
+        ->css(__DIR__ . '/assets/style.css')
         ->content(function (Document $document) {
             $document->head[] = "<script>
                                     let spoilers = document.getElementsByClassName('spoiler-collapse');
