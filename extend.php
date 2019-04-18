@@ -15,8 +15,12 @@ use s9e\TextFormatter\Configurator;
 
 return [
     (new Extend\Frontend('forum'))
-        ->js(__DIR__.'/assets/spoiler.js')
-        ->css(__DIR__.'/assets/style.css'),
+        ->content(function (Document $document) {
+            $document->head[] = '<link rel="stylesheet" type="text/css" href="./assets/extensions/petrosz007-spoiler-tag/style.css">';
+        })
+        ->content(function (Document $document) {
+            $document->head[] = '<script src="./assets/extensions/petrosz007-spoiler-tag/spoiler.css">';
+        })
     (new Extend\Formatter)
         ->configure(function (Configurator $config) {
             $config->BBCodes->addCustom(
