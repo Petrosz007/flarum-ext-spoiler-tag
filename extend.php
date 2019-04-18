@@ -15,17 +15,14 @@ use s9e\TextFormatter\Configurator;
 
 return [
     (new Extend\Frontend('forum'))
+        ->js(__DIR__.'/assets/spoiler.js')
         ->css(__DIR__.'/assets/style.css'),
     (new Extend\Formatter)
         ->configure(function (Configurator $config) {
             $config->BBCodes->addCustom(
                 '[spoiler]{TEXT1}[/spoiler]',
                 '<div class="spoiler">
-                    <input type="radio" name="radacc" class="accordion-chk" />
-                    <h3 class="spoiler-header">
-                        SPOILER
-                    <span class="spoiler-icon"></span>
-                    </h3>
+                    <button class="spoiler-collapse">SPOILER</button>
                     <div class="spoiler-content">
                         <p>
                         {TEXT1}
