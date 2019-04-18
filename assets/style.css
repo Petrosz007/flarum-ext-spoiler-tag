@@ -30,8 +30,11 @@
 
 /* Style the collapsible content. Note: hidden by default */
 .spoiler-content {
-  padding: 0 18px;
+  padding: 18px 18px;
   background-color: white;
   overflow: hidden;
   display:none;
+  margin: 0 1px 1px 1px;
+  border: 1px solid #444;
+  border-top: none;
 } 

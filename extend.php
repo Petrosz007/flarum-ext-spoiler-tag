@@ -31,9 +31,7 @@ return [
                 '<div class="spoiler">
                     <button class="spoiler-toggle" onclick="$(this).toggleClass(\'spoiler-toggle-active\');$(this).next(\'div.spoiler-content\').slideToggle();">SPOILER</button>
                     <div class="spoiler-content">
-                        <p>
                         {TEXT1}
-                        </p>
                     </div>
                 </div>'
             );
