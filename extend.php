@@ -17,7 +17,7 @@ return [
     (new Extend\Frontend('forum'))
         ->css(__DIR__ . '/assets/style.css')
         ->content(function (Document $document) {
-            $document->head[] = "<script>
+            $document->body[] = "<script defer>
                                     $(document).ready(function() {
                                         $('spoiler-toggle').click(function(){
                                             $(this).toggleClass('spoiler-toggle-active');
