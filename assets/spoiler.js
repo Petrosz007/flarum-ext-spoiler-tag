@@ -1,7 +1,7 @@
 let spoilers = document.getElementsByClassName('spoiler-collapse');
 
-for(let i = 0; i < spoilers.length; i++) {
-    let element = spoilers[i];
+for(let index_ = 0; index_ < spoilers.length; index_++) {
+    let element = spoilers[index_];
     element.addEventListener('click', () => {
         this.classList.toggle('spoiler-collapse-active');
 
