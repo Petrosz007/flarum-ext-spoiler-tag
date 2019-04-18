@@ -17,15 +17,11 @@ return [
     (new Extend\Frontend('forum'))
         ->css(__DIR__ . '/assets/style.css')
         ->content(function (Document $document) {
-            $document->body[] = "<script defer>
-                                    $(document).ready(function() {
-                                        setTimeout(()=>
-                                            $('.spoiler-toggle').click(function(){
-                                                $(this).toggleClass('spoiler-toggle-active');
-                                                $(this).parent().next('div.spoiler-content').slideToggle('slow');
-                                            });
-                                        }, 1000);
-                                    });
+            $document->body[] = "<script>
+                                    /*$('.spoiler-toggle').click(function(){
+                                        $(this).toggleClass('spoiler-toggle-active');
+                                        $(this).parent().next('div.spoiler-content').slideToggle('slow');
+                                    });*/
                                 </script>";
         }),
     (new Extend\Formatter)
@@ -33,7 +29,7 @@ return [
             $config->BBCodes->addCustom(
                 '[spoiler]{TEXT1}[/spoiler]',
                 '<div class="spoiler">
-                    <button class="spoiler-toggle">SPOILER</button>
+                    <button class="spoiler-toggle" conclick="$(this).toggleClass(\'spoiler-toggle-active\');$(this).parent().next(\'div.spoiler-content\').slideToggle();">SPOILER</button>
                     <div class="spoiler-content">
                         <p>
                         {TEXT1}
