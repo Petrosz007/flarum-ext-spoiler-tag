@@ -1,13 +1,13 @@
-let spoilers = document.getElementsByClassName("spoiler-collapse");
+document.getElementsByClassName("spoiler-collapse").forEach(element => {
+    element.addEventListener('click', () => {
+        this.classList.toggle('spoiler-collapse-active');
 
-for (let i = 0; i < spoilers.length; i++) {
-  spoilers[i].addEventListener("click", function() {
-    this.classList.toggle("spoiler-collapse-active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-        content.style.maxHeight = null;
-    } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-} 
+        let spoiler_content = this.nextElementSibling;
+        if(spoiler_content.style.maxHeight == 0) {
+            spoiler_content.style.maxHeight = 0;
+        } else {
+            spoiler_content.style.maxHeight = spoiler_content.scrollHeight + "px";
+        }
+    });
+    console.log('asd');
+});
