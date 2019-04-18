@@ -6,7 +6,7 @@
         "flarum/core": "^0.1.0-beta.8"
     },
     "autoload": {
-        "psr-4": {"Petrosz007\\flarum-ext-spoiler-tag\\": "src/"}
+        "psr-4": {"Petrosz007\\FlarumExtSpoilerTag\\": "src/"}
     },
     "extra": {
         "flarum-extension": {

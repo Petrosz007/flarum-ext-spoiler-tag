@@ -12,5 +12,4 @@ for(let index_ = 0; index_ < spoilers.length; index_++) {
             spoiler_content.style.maxHeight = spoiler_content.scrollHeight + "px";
         }
     });
-    console.log('asd'); 
 }

@@ -15,9 +15,25 @@ use s9e\TextFormatter\Configurator;
 
 return [
     (new Extend\Frontend('forum'))
+        ->css(__DIR__ . 'assets/style.css')
         ->content(function (Document $document) {
-            $document->head[] = '<link rel="stylesheet" type="text/css" href="https://andipeter.me/forum/assets/extensions/petrosz007-spoiler-tag/style.css">'
-                                + '<script src="https://andipeter.me/forum/assets/extensions/petrosz007-spoiler-tag/spoiler.js">';
+            $document->head[] = "<script>
+                                    let spoilers = document.getElementsByClassName('spoiler-collapse');
+
+                                    for(let index_ = 0; index_ < spoilers.length; index_++) {
+                                        let element = spoilers[index_];
+                                        element.addEventListener('click', (e) => {
+                                            e.currentTarget.classList.toggle('spoiler-collapse-active');
+
+                                            let spoiler_content = e.currentTarget.nextElementSibling;
+                                            if(spoiler_content.style.maxHeight == 0) {
+                                                spoiler_content.style.maxHeight = 0;
+                                            } else {
+                                                spoiler_content.style.maxHeight = spoiler_content.scrollHeight + "px";
+                                            }
+                                        });
+                                    }
+                                </script>";
         }),
     (new Extend\Formatter)
         ->configure(function (Configurator $config) {
