@@ -20,7 +20,7 @@ return [
         })
         ->content(function (Document $document) {
             $document->head[] = '<script src="./assets/extensions/petrosz007-spoiler-tag/spoiler.css">';
-        })
+        }),
     (new Extend\Formatter)
         ->configure(function (Configurator $config) {
             $config->BBCodes->addCustom(
