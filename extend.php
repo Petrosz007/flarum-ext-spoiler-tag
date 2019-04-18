@@ -19,10 +19,12 @@ return [
         ->content(function (Document $document) {
             $document->body[] = "<script defer>
                                     $(document).ready(function() {
-                                        $('.spoiler-toggle').click(function(){
-                                            $(this).toggleClass('spoiler-toggle-active');
-                                            $(this).parent().next('div.spoiler-content').slideToggle('slow');
-                                        });
+                                        setTimeout(()=>
+                                            $('.spoiler-toggle').click(function(){
+                                                $(this).toggleClass('spoiler-toggle-active');
+                                                $(this).parent().next('div.spoiler-content').slideToggle('slow');
+                                            });
+                                        }, 1000);
                                     });
                                 </script>";
         }),
